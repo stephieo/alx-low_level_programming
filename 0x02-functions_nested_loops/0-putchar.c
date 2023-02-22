@@ -2,12 +2,12 @@
 /**
  * main - Entry point
  *
- * Description - prints without using standard library
+ * Description : prints without using standard library
  *
- * Return : Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	write(1, "_putchar\n",9);
+	write(1, "_putchar\n", 9);
 	return (0);
 }
