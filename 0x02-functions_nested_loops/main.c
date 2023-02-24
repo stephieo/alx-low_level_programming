@@ -1,6 +1,7 @@
 #include "main.h"
 int main(void)
 {
-	print_alphabet();
+	_islower(100);
 	return (0);
+
 }
