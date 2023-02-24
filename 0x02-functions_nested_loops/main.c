@@ -1,7 +1,7 @@
 #include "main.h"
 int main(void)
 {
-	_islower(100);
+	_isalpha(100);
 	return (0);
 
 }
