@@ -1,7 +1,8 @@
 #include "main.h"
 int main(void)
 {
-	_isalpha(100);
+	print_sign(-100);
+	_putchar('\n');
 	return (0);
 
 }
