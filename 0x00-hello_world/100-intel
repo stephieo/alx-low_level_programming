@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -S $CFILE -o 0-main.s
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -S $CFILE -o 100-main.s
