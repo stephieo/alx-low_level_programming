@@ -16,20 +16,17 @@ int main(void)
 	{
 		for (b = 48 ; b < 58 ; b++)
 		{
-			if (b != a && b >a)
+			for (c = 48 ; c < 58 ; c++)
 			{
-				for(c = 48 ; c < 58 ; c++)
+				if ((b != a && b > a) && (c != b && c > b))
 				{
-					if ( c != b && c > b)
+					putchar(a);
+					putchar(b);
+					putchar(c);
+					if ((a + b + c) != 168)
 					{
-						putchar(a);
-						putchar(b);
-						putchar(c);
-						if ((a + b + c) != 168)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
