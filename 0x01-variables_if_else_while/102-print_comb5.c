@@ -18,7 +18,7 @@ int main(void)
 			c = (y / 10) + 48;
 			d = (y % 10) + 48;
 
-			if ((d != 48 && d > b) && a <= c)
+			if ((d > b && a == c) || c > a)
 			{
 				putchar(a);
 				putchar(b);
