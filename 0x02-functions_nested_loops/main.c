@@ -7,13 +7,6 @@
  */
 int main(void)
 {
-	int test;
-
-	test = _isalpha(65);
-	_putchar(test + '0');
-	test = _isalpha('b');
-	_putchar(test + '0');
-
-
+	print_alphabet_x10();
 	return (0);
 }
