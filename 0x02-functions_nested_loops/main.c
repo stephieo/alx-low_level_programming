@@ -1,5 +1,5 @@
+#include <stdio.h>
 #include "main.h"
-
 /**
  * main - entry point
  * Description: personal tester code for functions
@@ -9,12 +9,13 @@ int main(void)
 {
 	int r;
 
-	r = print_sign(0);
-	if (r < 0)
-		r *= -1;
-	_putchar(r + '0');
-	_putchar('\n');
-	return (0);
-
-	return (0);
+	r = _abs(-1);
+	printf("%d\n", r);
+        r = _abs(0);
+	printf("%d\n", r);
+        r = _abs(1);
+	printf("%d\n", r);
+        r = _abs(-98);
+	printf("%d\n", r);
+        return (0);
 }

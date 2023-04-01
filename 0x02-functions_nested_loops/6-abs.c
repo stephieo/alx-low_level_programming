@@ -6,14 +6,12 @@
  */
 int _abs(int i)
 {
-	int sign;
 
-	sign = print_sign(i);
-	if (sign == 1 || sign == 0)
+	if (i >= 0)
 	{
 		return (i);
 	}
-	else
+	else 
 	{
 		return (i * (-1));
 	}
