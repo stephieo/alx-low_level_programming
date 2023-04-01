@@ -9,16 +9,12 @@ int main(void)
 {
 	int r;
 
-	r = print_sign(98);
-	_putchar(',');
-	_putchar(' ');
+	r = print_sign(0);
+	if (r < 0)
+		r *= -1;
 	_putchar(r + '0');
 	_putchar('\n');
-	r = print_sign(0xff);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(r + '0');
-	_putchar('\n');
+	return (0);
 
 	return (0);
 }
