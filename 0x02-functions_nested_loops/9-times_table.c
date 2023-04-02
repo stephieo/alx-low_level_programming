@@ -11,7 +11,7 @@ void times_table(void)
 	while (a < 10)
 	{
 		_putchar(48);
-		
+
 		b = 1;
 		while (b < 10)
 		{
