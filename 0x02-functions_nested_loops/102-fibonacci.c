@@ -17,7 +17,14 @@ int main(void)
 	while (i < 50)
 	{
 		f[i] = f[i - 1] + f[i - 2];
-		printf("%ld, ", f[i]);
+		if (i == 49)
+		{
+			printf("%ld", f[i]);
+		}
+		else
+		{
+			printf("%ld, ", f[i]);
+		}
 		i++;
 	}
 	printf("\n");
