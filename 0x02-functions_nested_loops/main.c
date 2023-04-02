@@ -7,6 +7,8 @@
  */
 int main(void)
 {
-	times_table();
+	int n;
+	n = add(10, 48);
+	printf("sum is %d\n", n);
 	return (0);
 }
