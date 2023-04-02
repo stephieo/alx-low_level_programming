@@ -5,8 +5,8 @@
  */
 void jack_bauer(void)
 {
-	int x,y;
-	int a,b,c,d;
+	int x, y;
+	int a, b, c, d;
 
 	x = 0;
 	while (x <= 23)
@@ -14,7 +14,7 @@ void jack_bauer(void)
 		a = ((x / 10) + 48);
 		b = ((x % 10) + 48);
 
-		y=0;
+		y = 0;
 		while (y <= 59)
 		{
 			c = ((y / 10) + 48);
