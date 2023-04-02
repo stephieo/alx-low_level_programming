@@ -10,37 +10,30 @@ void times_table(void)
 	a = 0;
 	while (a < 10)
 	{
-		b = 0;
+		_putchar(48);
+		
+		b = 1;
 		while (b < 10)
 		{
 			c = a * b;
-			if (c % 10 == c && b == 9)
+			if (c % 10 == c)
 			{
-				_putchar(c + 48);
-				_putchar('\n');
-			}
-			else if (c % 10 == c && b != 9)
-			{
-				_putchar(c + 48);
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
+				_putchar(c + 48);
 			}
-			else if (c / 10 > 0 && b == 9)
+			else if (c / 10 > 0)
 			{
-				_putchar((c / 10) + 48);
-				_putchar((c % 10) + 48);
-				_putchar('\n');
-			}
-			else if (c / 10 > 0 && b != 9)
-			{
-				_putchar((c / 10) + 48);
-				_putchar((c % 10) + 48);
 				_putchar(',');
 				_putchar(' ');
+				_putchar((c / 10) + 48);
+				_putchar((c % 10) + 48);
 			}
 			b++;
 		}
+
+		_putchar('\n');
 		a++;
 	}
 }
