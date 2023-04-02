@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * natural - prints the sum of all multiples of 3 or 5 below 1024
- * Returns:nothing
+ * main - prints the sum of all multiples of 3 or 5 below 1024
+ * Returns: always 0 (success)
  */
 int main(void)
 {
@@ -12,11 +12,10 @@ int main(void)
 	{
 		if (x % 3 == 0 || x % 5 == 0)
 		{
-			printf("%d, ", x);
 			sum = sum + x;
 		}
 		x++;
 	}
-	printf("\n the sum of all these numbers is %d\n", sum);
-	return (sum);
+	printf("%d\n", sum);
+	return (0);
 }
