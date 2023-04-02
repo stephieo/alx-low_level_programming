@@ -7,8 +7,10 @@
  */
 int main(void)
 {
-	int n;
-	n = add(10, 48);
-	printf("sum is %d\n", n);
+	print_to_98(90);
+	print_to_98(95);
+	print_to_98(-10);
+	print_to_98(120);
+
 	return (0);
 }
