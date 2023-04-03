@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * main - entry point
@@ -7,8 +6,16 @@
  */
 int main(void)
 {
-	natural();
-	_putchar('\n');
+	int r;
+
+	r = _isalpha('0');
+	_putchar(r + 48);
+	r = _isalpha('D');
+	_putchar(r + 48);
+	r = _isalpha('n');
+	_putchar(r + 48);
+	r = _isalpha(108);
+	_putchar(r + 48);
 
 	return (0);
 }
