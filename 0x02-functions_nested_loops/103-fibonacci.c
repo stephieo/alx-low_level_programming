@@ -5,22 +5,29 @@
  */
 int main(void)
 {
-	long int sum = 0;
+	long int sum = 2;
 	long int f[50];
 	long int i;
+	long int finalsum;
 
 	f[0] = 1;
 	f[1] = 2;
 
-	for (i = 2; f[i] < 4000000; i++)
+	i = 2;
+	while (i < 33)
 	{
-		f[i] = f[i + i] + f[i - 2];
-		if (f[i] % 2 == 0)
+		f[i] = f[i - 1] + f[i - 2];
+		
+		if (f[i] < 4000000 && f[i] % 2 == 0)
 		{
 			sum  = sum + f[i];
 		}
+		
+		finalsum = sum;
+
+		i++;
 	}
-	printf("%ld\n", sum);
+	printf("%ld\n", finalsum);
 	return (0);
 }
 
