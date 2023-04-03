@@ -17,12 +17,12 @@ int main(void)
 	while (i < 33)
 	{
 		f[i] = f[i - 1] + f[i - 2];
-		
+
 		if (f[i] < 4000000 && f[i] % 2 == 0)
 		{
 			sum  = sum + f[i];
 		}
-		
+
 		finalsum = sum;
 
 		i++;
