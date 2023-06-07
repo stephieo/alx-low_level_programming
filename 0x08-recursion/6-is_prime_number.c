@@ -1,21 +1,5 @@
 #include "main.h"
 /**
- * is_prime_number - checks if a number is a prime number
- * @n: number to be checked
- *
- * Return: 1 if a prime number, 0 if not.
- */
-int is_prime_number(int n)
-{
-	if (n == 1)
-		return (0);
-
-	x = n -1;
-	return (looper(x,n));
-
-}
-
-/**
  * looper - checks if a number is divisible by any number before it
  * @x: the divisor
  * @n: the  dividend
@@ -33,7 +17,7 @@ int looper(int x, int n)
 		else
 		{
 	
-			return (looper(x-1,n);
+			return (looper(x-1,n));
 		}
 	}
 	else if (x <= 1 || )/* switch this to the top*/
@@ -43,3 +27,21 @@ int looper(int x, int n)
 
 
 }
+/**
+ * is_prime_number - checks if a number is a prime number
+ * @n: number to be checked
+ *
+ * Return: 1 if a prime number, 0 if not.
+ */
+int is_prime_number(int n)
+{
+	int x;
+
+	if (n == 1)
+		return (0);
+
+	x = n -1;
+	return (looper(x,n));
+
+}
+
