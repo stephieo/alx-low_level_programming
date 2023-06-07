@@ -20,7 +20,7 @@ int looper(int x, int n)
 			return (looper(x-1,n));
 		}
 	}
-	else if (x <= 1 || )/* switch this to the top*/
+	else if (x <= 1)/* switch this to the top*/
 	{
 		return (0);
 	}
