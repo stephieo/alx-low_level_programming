@@ -6,23 +6,20 @@
  *
  * Return: 0 if x is 1 or if n is divisible by x, 1 if  is prime
  */
-int looper(int x, int n)
+int looper(int n, int x)
 {
-	if (x > 1)
-	{
-		if (n % x == 0)
-		{
-			return (0);
-		}
-		else
-		{
-	
-			return (looper(x-1,n));
-		}
-	}
-	else if (x <= 1)/* switch this to the top*/
+ 	if (x == 1)
 	{
 		return (0);
+	}
+
+	if (n % x == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (looper(n,x-1));
 	}
 
 
@@ -37,11 +34,11 @@ int is_prime_number(int n)
 {
 	int x;
 
-	if (n == 1)
+	if (n <= 1)
 		return (0);
 
-	x = n -1;
-	return (looper(x,n));
+	x = n - 1;
+	return (looper(n,x));
 
 }
 
