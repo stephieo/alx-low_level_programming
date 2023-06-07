@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * getlength - gets last index of a string
+ * getlastindex - gets last index of a string
  * @s: string to measure
  * @m: starting index
  *
@@ -9,8 +9,8 @@
 int getlastindex(char *s, int m)
 {
 	int length;
-	
-	if(s[m])
+
+	if (s[m])
 	{
 		length = getlastindex(s, m + 1);
 		return (length);
@@ -56,7 +56,7 @@ int is_palindrome(char *s)
 {
 	int result;
 	int i = 0;
-	
+
 	result = getlastindex(s, i);
 
 	return (checker(s, i, result));
