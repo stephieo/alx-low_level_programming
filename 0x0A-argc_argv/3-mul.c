@@ -7,7 +7,7 @@
  *
  * Return: 0 if success, 1 if no arguments
  */
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
 	if (argc > 1)
 	{
@@ -17,7 +17,7 @@ int main(int argc, char * argv[])
 	else
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
-		
+
 }
