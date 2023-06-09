@@ -1,17 +1,17 @@
  #include "main.h"
 /**
  * _atoi - changes a string to an integer
- * @s:  string to convert
+ * @str:  string to convert
  * Return: the resulting integer
  */
 int _atoi(char *str)
 {
 	int num = 0, s = 1, i, retval;
-	
 
-	for (i = 0; str[i] !='\0'; i++)
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		s *= (str[i] == '-') ? -1 : 1 ;
+		s *= (str[i] == '-') ? -1 : 1;
 
 		if (str[i] >= '0' && str[i] <= '9')
 		{

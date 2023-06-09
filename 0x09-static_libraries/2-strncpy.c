@@ -4,10 +4,10 @@
  * @dest: destintation or target string
  * @src: string to be copied
  * @n: maximum number of characters to copy
- * 
+ *
  * Return: pointer to destination string
  */
-char *_strncpy(char *dest, char * src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int j;
 
