@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i <= ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		stringlength = getlength(av[i]);
 	}
@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 	if (sentence == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j]; j++)
 		{
