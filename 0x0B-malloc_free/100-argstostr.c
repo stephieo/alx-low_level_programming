@@ -33,10 +33,11 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 1; i <= ac; i++)
 	{
 		stringlength = getlength(av[i]);
 	}
+
 	sentence = malloc(sizeof(*sentence) * stringlength);
 	if (sentence == NULL)
 		return (NULL);
