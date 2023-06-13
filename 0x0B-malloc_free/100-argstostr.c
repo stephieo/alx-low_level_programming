@@ -35,10 +35,10 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		stringlength = getlength(av[i]);
+		stringlength += getlength(av[i]);
 	}
 
-	sentence = malloc(sizeof(*sentence) * stringlength);
+	sentence = malloc(sizeof(*sentence) * (stringlength + ac + 1));
 	if (sentence == NULL)
 		return (NULL);
 
@@ -50,6 +50,6 @@ char *argstostr(int ac, char **av)
 		}
 		sentence[a++] = '\n';
 	}
-	sentence[a] = '\0';
+	sentence[a++] = '\0';
 	return (sentence);
 }
