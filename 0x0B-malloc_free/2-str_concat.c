@@ -47,6 +47,9 @@ char *str_concat(char *s1, char *s2)
 	total_length = getlens(s1, s2);
 
 	constr = malloc(sizeof(char) * (total_length + 1));
+	
+	if (constr == NULL)
+		return ( NULL);
 
 	for (i = 0; s1[i]; i++)
 		constr[i] = s1[i];
