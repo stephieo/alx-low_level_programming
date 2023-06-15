@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i, total_length;
 	char *constr;
 
-	total_length  = get lens(s1, s2, n);
+	total_length  = getnlens(s1, s2, n);
 
 	constr = malloc(sizeof(*constr) * total_length + 1);
 
