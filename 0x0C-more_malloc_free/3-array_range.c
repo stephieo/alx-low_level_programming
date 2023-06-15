@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "main."
+#include "main.h"
 /**
  * array_range - creates an array of integers with values from min to max
  * @min: lowest value
@@ -17,7 +17,7 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	length = (max - min) + 1;
-	arr = malloc(sizeof(*arr) * length;
+	arr = malloc(sizeof(*arr) * length);
 
 	if (arr == NULL)
 		return (NULL);
