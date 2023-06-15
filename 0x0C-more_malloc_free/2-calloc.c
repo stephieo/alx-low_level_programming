@@ -45,7 +45,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	else
 	{
 		arraysize = nmemb * size;
-		_memset(array, '0', arraysize);
+		_memset(array, 0, arraysize);
 	}
 	return (array);
 }
