@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _memset -fills memory with a constant byte
  * @s: beginning of memory area
@@ -30,7 +31,7 @@ char *_memset(char *s, char b, unsigned int n)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *array;
-	int i, j;
+	unsigned int arraysize;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -46,6 +47,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		arraysize = nmemb * size;
 		_memset(array, '0', arraysize);
 	}
-	return (array)
+	return (array);
 }
 
