@@ -15,35 +15,35 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *newptr;
 	unsigned int min;
 	unsigned int i;
-	
+
 	oldp = ptr;
 
 	if (ptr == NULL)
 	{
 		newptr = malloc(new_size);
 		free(ptr);
-		return(newptr);
+		return (newptr);
 	}
 
-	
+
 	if (new_size == old_size)
 	{
-		return(ptr);
+		return (ptr);
 	}
 	else if (new_size == 0)
 	{
 		free(ptr);
-		return(NULL);
+		return (NULL);
 	}
 	else
 	{
 		newptr = malloc(new_size);
-		
-		if(newptr == NULL)
-			return(NULL);
-	
-		min = new_size < old_size?new_size:old_size;
-		printf("%u\n",min);	
+
+		if (newptr == NULL)
+			return (NULL);
+
+		min = new_size < old_size ? new_size : old_size;
+		printf("%u\n", min);
 		for (i = 0; i < min; i++)
 			newptr[i] = oldp[i];
 	}
