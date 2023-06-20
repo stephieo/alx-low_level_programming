@@ -9,7 +9,7 @@
  *
  * Return: Nothing.
  */
- void simple_print_buffer(char *buffer, unsigned int size)
+ /*void simple_print_buffer(char *buffer, unsigned int size)
 {
 	unsigned int i;
 	i = 0;
@@ -28,7 +28,7 @@
 	       i++;
 	}
 	printf("\n");
-}
+}*/
 
 /**
  * main - tester code
@@ -37,10 +37,12 @@
  */
 int main(void)
 {
-	char *p;
-	int i;
-	p = malloc(sizeof(char) * 10);
-	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+	char *s;
+	
+	s = string_nconcat("HELLO", NULL, 12);
+	if (s == NULL)
+	{
+		printf("failed\n");
 	i = 0;
 	while(i < 98)
 	{
