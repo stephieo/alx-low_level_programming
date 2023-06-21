@@ -10,6 +10,12 @@ void print_elem(int elem)
 {
 	printf("%d\n", elem);
 }
+
+int abs_is_98(int elem)
+{
+	return(elem == 98 || -elem == 98);
+}
+
 /**
  * main - tester code
  *
@@ -17,10 +23,12 @@ void print_elem(int elem)
  */
 int main(void)
 {
-	int array[5] = {0, 5, 10, 15, 1024};
+	int task2;
+	int array[5] = {0, 5, -98, 15, 1024};
 
-	array_iterator(array, 5, &print_elem);
 	print_name("bob", print_name_as_is);
-	printf("\n");
+	array_iterator(array, 5, &print_elem);
+	task2 = int_index(array, 5, abs_is_98);
+	printf("%d\n", task2);
 	return (0);
 }
