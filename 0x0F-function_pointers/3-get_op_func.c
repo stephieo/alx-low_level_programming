@@ -20,14 +20,16 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 
-	while (i < (sizeof(ops) / sizeof(ops[0])))
+	while (i < (sizeof(ops) / sizeof(ops[0])) && (strcmp(s, ops[i] .op)))
 	{
-		if (!(strcmp(s,ops[i] .op)))
-			return (ops[i].f);
 		i++;
 	}
 
-	return (NULL);
+	if (i => (sizeof(ops) / sizeof(ops[0]))
+			return (NULL);
+
+	return (ops[i].f);
+
 }
 
 
