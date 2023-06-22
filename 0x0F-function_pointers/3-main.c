@@ -13,7 +13,9 @@ int main(int argc, char *argv[])
 {
 	int (*chooser)(int, int);
 	int func_result = 0;
-	int num1 = atoi(argv[1]), op_val = *argv[2], num2 = atoi(argv[3]);
+	int num1;
+	int num2;
+	char *op_val;
 
 	if (argc != 4)
 	{
@@ -21,15 +23,17 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	chooser =  get_op_func(argv[2]);
-
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	op_val = argv[2];
+	chooser =  get_op_func(op_val);
 	if (chooser == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((op_val == '/' && num2 == 0) || (op_val == '%' && num2 == 0))
+	if ((op_val[0] == '/' && num2 == 0) || (op_val[0] == '%' && num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
@@ -37,8 +41,5 @@ int main(int argc, char *argv[])
 
 	func_result = chooser(num1, num2);
 	printf("%d\n", func_result);
-
-
 	return (0);
 }
-

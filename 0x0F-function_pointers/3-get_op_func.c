@@ -9,7 +9,7 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -26,7 +26,7 @@ int (*get_op_func(char *s))(int, int)
 	}
 
 	if (i >= (sizeof(ops) / sizeof(ops[0])))
-			return (NULL);
+		return (NULL);
 
 	return (ops[i].f);
 
