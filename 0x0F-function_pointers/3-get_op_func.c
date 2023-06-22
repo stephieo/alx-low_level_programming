@@ -25,7 +25,7 @@ int (*get_op_func(char *s))(int, int)
 		i++;
 	}
 
-	if (i => (sizeof(ops) / sizeof(ops[0]))
+	if (i >= (sizeof(ops) / sizeof(ops[0])))
 			return (NULL);
 
 	return (ops[i].f);
