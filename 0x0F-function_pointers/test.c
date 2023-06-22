@@ -24,7 +24,7 @@ int abs_is_98(int elem)
 int main(void)
 {
 	int task2;
-	int array[5] = {0, 5, -98, 15, 1024};
+	int array[5] = {0, 5, -8, 15, 1024};
 
 	print_name("bob", print_name_as_is);
 	array_iterator(array, 5, &print_elem);
