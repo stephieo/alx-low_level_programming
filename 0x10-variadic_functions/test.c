@@ -9,8 +9,10 @@ int main(void)
 {
 	int sum;
 
-	sum = sum_them_all(2, 3, 7);
+	sum = sum_them_all(2, -3, 7);
 	printf("%d\n", sum);
+	print_numbers(", ", 2, -9, -29);
+
 
 	return(0);
 }
