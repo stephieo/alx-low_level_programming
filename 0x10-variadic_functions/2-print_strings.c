@@ -4,7 +4,7 @@
 /**
  * print_strings - prints variable number of strings
  * @seperator: character(s) to seperate each string
- * @n: number of arguments 
+ * @n: number of arguments
  */
 void print_strings(const char *seperator, const unsigned int n, ...)
 {
@@ -20,7 +20,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 			printf("(nil)");
 		else
 			printf("%s", string);
-		
+
 		if (seperator != NULL && i != (n - 1))
 			printf("%s", seperator);
 		i++;

@@ -59,7 +59,7 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 			recurse_helper(num);
 		}
 
-		if (seperator != NULL && i != (n-1))
+		if (seperator != NULL && i != (n - 1))
 		{
 			sep = 0;
 			while (seperator[sep] != '\0')
