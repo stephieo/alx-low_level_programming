@@ -13,6 +13,7 @@ int main(void)
 	printf("%d\n", sum);
 	print_numbers(", ", 2, -9, -29);
 	print_strings(", ", 2, "Jay","Django");
+	print_all("ceis", 'B', 3, "stSchool");
 
 
 	return(0);
