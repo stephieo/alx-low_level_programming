@@ -7,7 +7,7 @@
  *
  * Return:
  */
- void recurse_helper(int num)
+void recurse_helper(int num)
 {
 	int n;
 
@@ -37,12 +37,13 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	unsigned int i = 0;
 	int num, sep;
 	va_list digits;
+
 	va_start(digits, n);
-	
+
 	while (i < n)
 	{
 		num = va_arg(digits, int);
-		
+
 		if (num < 0)
 		{
 			_putchar('-');
@@ -57,7 +58,7 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 		{
 			recurse_helper(num);
 		}
-		
+
 		if (seperator != NULL)
 		{
 			sep = 0;
