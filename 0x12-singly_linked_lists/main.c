@@ -33,6 +33,16 @@ int main(void)
 	n = list_len(head);
 	printf("-> %lu elements\n", n);
 
+	add_node(&head, "Alexandro");
+	add_node(&head, "Asaia");
+	add_node(&head, "Augustin");
+	add_node(&head, "Bennett");
+	add_node(&head, "Bilal");
+	add_node(&head, "Chandler");
+	add_node(&head, "Damian");
+	add_node(&head, "Daniel");
+	add_node(&head, "Dora");
+	print_list(head);	
 	free(new);
 	return (0);
 }
