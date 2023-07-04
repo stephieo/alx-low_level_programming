@@ -10,11 +10,10 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp = NULL;
 	size_t i = 0;
-	list_t *count = **head;
+	list_t *count = *head;
 
 
 	temp = malloc(sizeof(list_t));
-
 	if (temp == NULL)
 		return (NULL);
 
@@ -23,8 +22,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	while (str[i] != '\0')
 		i++;
 	temp->len = i;
+	temp->next = NULL;
 
-	while (*count != NULL)
+	while (count->next != NULL)
 		count = count->next;
 
 	count->next = temp;

@@ -42,7 +42,17 @@ int main(void)
 	add_node(&head, "Damian");
 	add_node(&head, "Daniel");
 	add_node(&head, "Dora");
-	print_list(head);	
+	
+	add_node_end(&head, "Anne");
+	add_node_end(&head, "Colton");
+        add_node_end(&head, "Corbin");
+	add_node_end(&head, "Daniel");
+	add_node_end(&head, "Danton");
+	add_node_end(&head, "David");
+	add_node_end(&head, "Gary");
+	add_node_end(&head, "Holden");
+	print_list(head);
+
 	free(new);
 	return (0);
 }
