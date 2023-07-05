@@ -3,10 +3,10 @@
  * free_listint2 - frees a listint_t list and sets head to NULL
  * @head: pointer to first node
  */
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	listint_t *remove = head;
-	listint_t *hold = head;
+	listint_t *remove = *head;
+	listint_t *hold = *head;
 
 	while (hold != NULL)
 	{
@@ -14,6 +14,6 @@ void free_listint2(listint_t *head)
 		free(remove);
 		remove = hold;
 	}
-	head = NULL;
+	*head = NULL;
 
 }
