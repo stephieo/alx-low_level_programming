@@ -23,6 +23,10 @@ int main(void)
 	new->next = head;
 	head = new;
 	n = listint_len(head);
+	add_nodeint(&head, 0);
+	add_nodeint(&head, 1);
+	add_nodeint(&head, 2);
+	add_nodeint(&head, 3);
 	printf("-> %lu elements\n", n);
 	
 	free(new);
