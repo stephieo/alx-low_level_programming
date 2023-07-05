@@ -23,12 +23,21 @@ int main(void)
 	new->next = head;
 	head = new;
 	n = listint_len(head);
+	/*task 2*/
 	add_nodeint(&head, 0);
 	add_nodeint(&head, 1);
 	add_nodeint(&head, 2);
 	add_nodeint(&head, 3);
+	print_listint(head);
+	n = listint_len(head);
 	printf("-> %lu elements\n", n);
-	
+
+	/*task 3*/
+	add_nodeint_end(&head, 98);
+	add_nodeint_end(&head, 402);
+	add_nodeint_end(&head, 1024);
+	print_listint(head);
+	printf("->%lu elements\n", listint_len(head));
 	free(new);
 	return (0);
 }
