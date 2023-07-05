@@ -17,9 +17,15 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	create->n = n;
 	create->next = NULL;
 
-	while (trav->next != NULL)
-		trav = trav->next;
-	trav->next = create;
-
+	if (*head == NULL)
+	{
+		*head = create;
+	}
+	else
+	{
+		while (trav->next != NULL)
+			trav = trav->next;
+		trav->next = create;
+	}
 	return (create);
 }
