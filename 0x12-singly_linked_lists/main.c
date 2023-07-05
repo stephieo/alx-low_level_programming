@@ -53,6 +53,7 @@ int main(void)
 	add_node_end(&head, "Holden");
 	print_list(head);
 
+	free_list(head);
 	free(new);
 	return (0);
 }
