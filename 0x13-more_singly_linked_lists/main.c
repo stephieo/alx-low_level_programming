@@ -12,6 +12,7 @@ int main(void)
 	listint_t *node;
 	listint_t hello = {8, NULL};
 	size_t n;
+	int sum;
 
 	head = &hello;
 	new = malloc(sizeof(listint_t));
@@ -42,7 +43,8 @@ int main(void)
 	
 	node = get_nodeint_at_index(head, 5);
 	printf("%d\n", node->n);
-	
+	sum = sum_listint(head);
+	printf("sum = %d\n", sum);
 	/*free_listint(head);*/
 	free_listint2(&head);
 	printf("%p\n", (void *)head);
