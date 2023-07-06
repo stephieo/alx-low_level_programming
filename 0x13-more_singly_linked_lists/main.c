@@ -9,6 +9,7 @@ int main(void)
 {
 	listint_t *head;
 	listint_t *new;
+	listint_t *node;
 	listint_t hello = {8, NULL};
 	size_t n;
 
@@ -38,9 +39,13 @@ int main(void)
 	add_nodeint_end(&head, 1024);
 	print_listint(head);
 	printf("->%lu elements\n", listint_len(head));
+	
+	node = get_nodeint_at_index(head, 5);
+	printf("%d\n", node->n);
+	
 	/*free_listint(head);*/
-	free_listint2(head);
+	free_listint2(&head);
 	printf("%p\n", (void *)head);
-	free(new);
+
 	return (0);
 }
