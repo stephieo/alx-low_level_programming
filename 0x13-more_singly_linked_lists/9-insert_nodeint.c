@@ -7,11 +7,11 @@
  *
  * Return: pointer to  new node or NULL
  */
-insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp = *head;
 	listint_t *create = *head;
-	int i;
+	unsigned int i;
 
 	create = malloc(sizeof(listint_t));
 	if (create == NULL)
@@ -19,7 +19,7 @@ insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	create->n = n;
 
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < idx - 1; i++)
 	{
 		if (temp == NULL)
 			return (NULL);

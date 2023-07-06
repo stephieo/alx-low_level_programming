@@ -45,6 +45,8 @@ int main(void)
 	printf("%d\n", node->n);
 	sum = sum_listint(head);
 	printf("sum = %d\n", sum);
+	insert_nodeint_at_index(&head, 5, 4096);
+	print_listint(head);
 	/*free_listint(head);*/
 	free_listint2(&head);
 	printf("%p\n", (void *)head);
