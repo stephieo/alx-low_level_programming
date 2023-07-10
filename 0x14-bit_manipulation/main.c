@@ -5,6 +5,7 @@
 int main(void)
 {
 	unsigned long int n;
+	unsigned int x;
 	int m;
 	
 
@@ -46,5 +47,11 @@ int main(void)
 	set_bit(&n, 0);
 	printf("%lu\n", n);
 	
+	x = flip_bits(1024, 1);
+    	printf("%u\n", x);
+        x = flip_bits(402, 98);
+	printf("%u\n", x);
+	x = flip_bits(1024, 3);
+	printf("%u\n", x);
 	return (0);
 }
