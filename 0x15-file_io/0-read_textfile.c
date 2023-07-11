@@ -14,11 +14,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (fd == -1)
 		return (0);
+	
+	readcount = read(filename,O_RDWR | O_CREAT , S_IWRXU | S_IROTH | S_IXOTH);
 
 	if (filename == NULL)
 		return (0);
 
 	if (write == -1)
 		return (0);
+
 	return (readcount);
 }
