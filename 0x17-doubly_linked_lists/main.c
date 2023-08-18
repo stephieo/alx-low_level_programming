@@ -11,7 +11,7 @@
 int main(void)
 {
 	dlistint_t *head;
-        dlistint_t *new;
+        dlistint_t *new, *node;
 	dlistint_t hello = {8, NULL, NULL};
 	size_t n;
 
@@ -48,6 +48,9 @@ int main(void)
 	
 	n = print_dlistint(head);
 	printf("-> %lu elements\n", n);
+	
+	node = get_dnodeint_at_index(head, 5);
+	    printf("%d\n", node->n);
 	
 	n = dlistint_len(head);
 	    printf("-> %lu elements\n", n);
