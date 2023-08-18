@@ -51,6 +51,6 @@ int main(void)
 	
 	n = dlistint_len(head);
 	    printf("-> %lu elements\n", n);
-	free(new);
+	free_dlistint(head);
 	return (EXIT_SUCCESS);
 }
