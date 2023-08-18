@@ -40,6 +40,15 @@ int main(void)
 	n = print_dlistint(head);
 	printf("-> %lu elements\n", n);
 
+/*task 3*/
+	add_dnodeint_end(&head, 9);
+	add_dnodeint_end(&head, 10);
+	add_dnodeint_end(&head, 11);
+	add_dnodeint_end(&head, 12);
+	
+	n = print_dlistint(head);
+	printf("-> %lu elements\n", n);
+	
 	n = dlistint_len(head);
 	    printf("-> %lu elements\n", n);
 	free(new);
