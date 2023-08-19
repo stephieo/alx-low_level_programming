@@ -13,9 +13,13 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	while (i < index)
 	{
+		if (temp == NULL)
+			break;
+
 		temp = temp->next;
 		i++;
+	
 	}
 
 	return (temp);
-}
+
