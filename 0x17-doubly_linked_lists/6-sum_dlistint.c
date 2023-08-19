@@ -18,6 +18,7 @@ int sum_dlistint(const dlistint_t *head)
 		i += counter->n;
 		counter = counter->next;
 	}
+	i += counter->n;
 
 	return (i);
 
