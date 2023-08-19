@@ -12,6 +12,7 @@ int main(void)
 {
 	dlistint_t *head;
         head = NULL;
+    insert_dnodeint_at_index(&head, 5, 4096);
 	    add_dnodeint_end(&head, 0);
 	      add_dnodeint_end(&head, 1);
 	   add_dnodeint_end(&head, 2);
