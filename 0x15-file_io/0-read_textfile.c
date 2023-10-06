@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * read_textfile - reads a text file and prints to  stdout
@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	writecount = write(STDOUT_FILENO, mybuff, letters);
-	if (writecount == -1 || writecount != letters)
+	if (writecount == -1 || writecount != (ssize_t)letters)
 	{
 		free(mybuff);
 		return (0);
@@ -45,5 +45,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (checkclose == -1)
 		return (0);
 
-	return (writeicount);
+	return (writecount);
 }
