@@ -8,8 +8,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int i, fd, writecheck;
-	size_t length;
+	int i = 0, fd, writecheck;
+	size_t length = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,7 +22,6 @@ int create_file(const char *filename, char *text_content)
 	else
 		for (i = 0, length = 0; text_content[i] != '\0'; i++, length++)
 			;
-
 
 	writecheck = write(fd, text_content, length);
 	if (writecheck == -1)
