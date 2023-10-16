@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	ssize_t readcheck = 10, writecheck;
+	ssize_t readcheck = 1024, writecheck;
 	size_t bytesread = 1024;
 	int filefrom_fd, fileto_fd, closecheck1, closecheck2;
 	char *mybuff, *testbuff;
@@ -31,7 +31,7 @@ int main(int ac, char **av)
 	/*open file from*/
 	filefrom_fd = open(av[1], O_RDONLY);
 	/*open file to */
-	fileto_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
+	fileto_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 		if (filefrom_fd == -1)
 		{
@@ -43,7 +43,7 @@ int main(int ac, char **av)
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
-	while (readcheck)
+	while (readcheck == 1024)
 	{
 		/*read file from to buffer*/
 		readcheck = read(filefrom_fd, mybuff, bytesread);
