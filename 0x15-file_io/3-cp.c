@@ -18,7 +18,7 @@ void errorchecker(int original, int copy, char *filename,
 			exit(98);
 		}
 
-		if (copy== -1)
+		if (copy == -1)
 		{
 			dprintf(2, "Error: Can't write to %s\n", filename);
 			exit(99);
@@ -26,13 +26,13 @@ void errorchecker(int original, int copy, char *filename,
 	}
 	else
 	{
-		if(original == -1  || copy == -1)
+		if (original == -1  || copy == -1)
 		{
 			dprintf(2, "Error: Can't close fd %d\n", fd);
 			exit(100);
 		}
 	}
-	
+
 }
 
 /**
@@ -54,12 +54,6 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	/*mybuff = malloc(sizeof(char) * 1024);
-	if (!mybuff)
-	{
-		write(STDERR_FILENO, "malloc error\n", 13);
-		exit(-1);
-	}*/
 
 	filefrom_fd = open(av[1], O_RDONLY);
 	fileto_fd = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -71,7 +65,6 @@ int main(int ac, char **av)
 		readcheck = read(filefrom_fd, mybuff, sizeof(mybuff));
 		if (readcheck == -1)
 			errorchecker(-1, 0, av[1], 0, 'r');
-	/*	printf("%s\n 1\n\n", mybuff);*/
 
 		writecheck = write(fileto_fd, mybuff, readcheck);
 		if (writecheck == -1)
@@ -79,7 +72,7 @@ int main(int ac, char **av)
 	}
 	closecheck1 = close(filefrom_fd);
 	errorchecker(closecheck1, 0, av[1], fileto_fd, 'c');
-	
+
 	closecheck2 = close(fileto_fd);
 	errorchecker(0, closecheck2, av[2], fileto_fd, 'c');
 	return (0);
