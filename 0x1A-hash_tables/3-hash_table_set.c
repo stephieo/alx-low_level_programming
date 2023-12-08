@@ -30,6 +30,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	new_element->next = ht->array[ht_index];
 	ht->array[ht_index] = new_element;
-	return (0);
+	return (1);
 
 }
