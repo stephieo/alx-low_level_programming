@@ -1,1 +1,12 @@
-#!/usr/bin/env bash
+NAME = school
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+$(OBJ): %.o: %.c
+	$(CC) -c $< -o $@
